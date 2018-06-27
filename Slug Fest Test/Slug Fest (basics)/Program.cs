@@ -11,8 +11,20 @@ namespace Slug_Fest__basics_
         static void Main(string[] args)
         {
             Fighter ryu = new Fighter();
-
-            ryu.StandCombo();
+            char dum;
+            while (true)
+            {
+                try
+                {
+                    dum = Console.ReadKey().KeyChar;
+                    Console.WriteLine();
+                    ryu.Decision(dum);
+                }
+                catch (FormatException)
+                {
+                }
+            }
+            ryu.Combo();
             Console.ReadKey();
         }
     }

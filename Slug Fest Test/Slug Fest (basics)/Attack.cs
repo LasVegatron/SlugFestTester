@@ -66,7 +66,7 @@ namespace Slug_Fest__basics_
         {
             moveName = side;
             target = "head";
-            hitLength = 1;
+            hitLength = 1.3;
             damage = 3;
         }
     }

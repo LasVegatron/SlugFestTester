@@ -3,7 +3,7 @@
     /// <summary>
     /// Basic structure for all stances.
     /// </summary>
-    public abstract class Stance
+    public class Stance
     {
         public Attack light;
         public Attack heavy;
@@ -56,8 +56,8 @@
         {
             light = new Jab();
             heavy = new Cross();
-            leftHook = new Hook("Rip") { target = "ribs" };
-            rightHook = new Hook("uppercut") { target = "chest" };
+            leftHook = new Hook("uppercut") { target = "chest" };
+            rightHook = new Hook("Rip") { target = "ribs" };
         }
     }
 
@@ -79,7 +79,8 @@
     {
         public LeanLeft()
         {
-
+            leftHook = new Hook("Rip") { target = "ribs" };
+            rightHook = new Hook("uppercut") { target = "chest" };
         }
     }
 }
