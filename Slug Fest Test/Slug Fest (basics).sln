@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slug Fest (basics)", "Slug Fest (basics)\Slug Fest (basics).csproj", "{636BE7B5-939F-4FB7-AA7D-B3BFCFD867E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{636BE7B5-939F-4FB7-AA7D-B3BFCFD867E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636BE7B5-939F-4FB7-AA7D-B3BFCFD867E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636BE7B5-939F-4FB7-AA7D-B3BFCFD867E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636BE7B5-939F-4FB7-AA7D-B3BFCFD867E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96D52971-9366-43E9-9B68-97B680173A0E}
+	EndGlobalSection
+EndGlobal
