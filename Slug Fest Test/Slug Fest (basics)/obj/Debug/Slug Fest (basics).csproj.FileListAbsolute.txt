@@ -1,0 +1,7 @@
+C:\Users\Thomas\Documents\GitHub\Slug-Fest--basics-\Slug Fest (basics)\Slug Fest (basics)\bin\Debug\Slug Fest (basics).exe.config
+C:\Users\Thomas\Documents\GitHub\Slug-Fest--basics-\Slug Fest (basics)\Slug Fest (basics)\bin\Debug\Slug Fest (basics).exe
+C:\Users\Thomas\Documents\GitHub\Slug-Fest--basics-\Slug Fest (basics)\Slug Fest (basics)\bin\Debug\Slug Fest (basics).pdb
+C:\Users\Thomas\Documents\GitHub\Slug-Fest--basics-\Slug Fest (basics)\Slug Fest (basics)\obj\Debug\Slug Fest (basics).csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\Slug-Fest--basics-\Slug Fest (basics)\Slug Fest (basics)\obj\Debug\Slug Fest (basics).csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Documents\GitHub\Slug-Fest--basics-\Slug Fest (basics)\Slug Fest (basics)\obj\Debug\Slug Fest (basics).exe
+C:\Users\Thomas\Documents\GitHub\Slug-Fest--basics-\Slug Fest (basics)\Slug Fest (basics)\obj\Debug\Slug Fest (basics).pdb
