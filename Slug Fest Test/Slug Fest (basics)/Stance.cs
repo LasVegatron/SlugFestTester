@@ -3,34 +3,66 @@
     /// <summary>
     /// Basic structure for all stances.
     /// </summary>
-    public class Stance
+    public abstract class Stance : Values
     {
+        //Set of defences per stance
+        public Head head;
+        public Body body;
+        //Set of attacks per stance.
         public Attack light;
         public Attack heavy;
         public Attack leftHook;
         public Attack rightHook;
 
+        /// <summary>
+        /// Stance's light attack.
+        /// </summary>
         public void lightAttack()
         {
             light.Animation();
             light.Target();
         }
+
+        /// <summary>
+        /// Stance's heavy attack.
+        /// </summary>
         public void HeavyAttack()
         {
             heavy.Animation();
             heavy.Target();
         }
+
+        /// <summary>
+        /// Stance's left hook attack.
+        /// </summary>
         public void LeftHookAttack()
         {
             leftHook.Animation();
             leftHook.Target();
         }
+
+        /// <summary>
+        /// Stance's right hook.
+        /// </summary>
         public void RightHookAttack()
         {
             rightHook.Animation();
             rightHook.Target();
         }
-
+        
+        public void FindTarget(string attackThis, string from)
+        {
+            if (attackThis == Torso())
+            {
+                //find the direction it is coming from
+                //check if the direction is blocked
+            }
+            else if (attackThis == Head())
+            {
+                //find the direction it is coming from
+                //check if the direction is blocked or dodgeable
+            }
+        }
     }
 
     /// <summary>
@@ -40,10 +72,11 @@
     {
         public Normal()
         {
+            head = new Head() { front = true };
             light = new Jab();
             heavy = new Cross();
-            leftHook = new Hook("left hook");
-            rightHook = new Hook("right hook");
+            leftHook = new Hook("left hook") { direction = Left() };
+            rightHook = new Hook("right hook") { direction = Right() };
         }
     }
 
@@ -55,9 +88,9 @@
         public Lean()
         {
             light = new Jab();
-            heavy = new Cross();
-            leftHook = new Hook("uppercut") { target = "chest" };
-            rightHook = new Hook("Rip") { target = "ribs" };
+            heavy = new Cross() { target = Torso() };
+            leftHook = new Hook("uppercut") { target = Torso() };
+            rightHook = new Hook("Rip") { target = Torso() };
         }
     }
 
@@ -68,7 +101,10 @@
     {
         public LeanRight()
         {
-
+            light = new Jab() { };
+            heavy = new Cross() { target = Torso() };
+            leftHook = new Hook("uppercut") { direction = Front() };
+            rightHook = new Hook("Rip") { direction = Right() };
         }
     }
 
@@ -79,8 +115,8 @@
     {
         public LeanLeft()
         {
-            leftHook = new Hook("Rip") { target = "ribs" };
-            rightHook = new Hook("uppercut") { target = "chest" };
+            leftHook = new Hook("Rip") { target = Torso() };
+            rightHook = new Hook("uppercut") { target = Torso() };
         }
     }
 }

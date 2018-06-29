@@ -5,27 +5,30 @@ namespace Slug_Fest__basics_
     /// <summary>
     /// Basic structure for every attack.
     /// </summary>
-    public abstract class Attack
+    public abstract class Attack : Values
     {
-        //attack name
+        //Attack name.
         public string moveName;
-        //attack target
+        //Attack target.
         public string target;
-        //how many seconds the attack will take to complete
+        //Where the attack is coming from.
+        public string direction;
+        //How many seconds the attack will take to complete.
         public double hitLength;
-        //how many hitpoints this attack will do
+        //How many hitpoints this attack will do.
         public int damage;
 
-        //the animation of the attack
+
+        //The animation of the attack.
         public void Animation()
         {
             Console.Write(moveName);
         }
 
-        //what this attack will hit
+        //What this attack will hit.
         public void Target()
         {
-            Console.WriteLine(" to {0}. {1} Damage done", target, damage);
+            Console.WriteLine(" to {0} from {1}. {2} Damage done", target, direction, damage);
         }
     }
 
@@ -37,7 +40,8 @@ namespace Slug_Fest__basics_
         public Jab()
         {
             moveName = "Jab";
-            target = "head";
+            target = Head();
+            direction = Front();
             hitLength = 0.5;
             damage = 1;
         }
@@ -51,7 +55,8 @@ namespace Slug_Fest__basics_
         public Cross()
         {
             moveName = "Cross";
-            target = "head";
+            target = Head();
+            direction = Front();
             hitLength = 0.8;
             damage = 2;
         }
@@ -62,10 +67,11 @@ namespace Slug_Fest__basics_
     /// </summary>
     public class Hook : Attack
     {
-        public Hook(string side)
+        public Hook(string direction)
         {
-            moveName = side;
-            target = "head";
+            moveName = direction + " hook";
+            target = Head();
+            this.direction = direction;
             hitLength = 1.3;
             damage = 3;
         }
